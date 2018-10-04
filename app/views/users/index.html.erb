@@ -1,0 +1,17 @@
+<div class="header">
+  <div class="container">
+    <h1>Users</h1>
+  </div>
+</div>
+
+<div class="users">
+  <div class="container">
+  	<% @users.each do |user| %> 
+			<div class="user"> 
+  			<p class="content"><%= user.name %></p> 
+  			<p class="email"><%= user.email %></p> 
+			</div> 
+		<% end %>
+		<%= link_to 'New User', "users/new" %>
+  </div>
+</div>

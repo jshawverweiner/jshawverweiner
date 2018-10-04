@@ -1,0 +1,22 @@
+<% provide(:title, 'Sign up') %>
+<h1>Make Post</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@post) do |p| %>
+      <%= p.label :user%>
+      <%= p.text_field :user %>
+       <br></br>
+       <%= p.label :subject %>
+       <%= p.text_field :subject %>
+       <br></br>
+      <%= p.label :content %>
+      <%= p.text_area :content %>
+      <br></br>
+      <%= p.label :source %>
+      <%= p.text_field :source%>
+       <br></br>
+      <%= p.submit "Create post", class: "btn btn-primary" %>
+      
+    <% end %>
+  </div>
+</div>

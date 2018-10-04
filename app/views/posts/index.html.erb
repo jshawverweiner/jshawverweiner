@@ -1,0 +1,23 @@
+<div class="header">
+  <div class="container">
+    <h1>Posts</h1>
+  </div>
+</div>
+
+<div class="post">
+  <div class="container">
+  	<% @posts.each do |post| %> 
+			<div class="post"> 
+			<p>USER:</p>
+  			<b class="user"><%= post.user%></b> 
+  			<p>SUBJECT:</p>
+  			<p class="subject"><%= post.subject %></p> 
+  			<p>POST:</p>
+  			<p class="content"><%= post.content %></p>
+  			<p>SOURCE:</p>
+  			<p class="source"><%= post.source %></p>
+			</div> 
+		<% end %>
+		<%= link_to 'New Post', "posts/new" %>
+  </div>
+</div>
